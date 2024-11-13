@@ -1,0 +1,229 @@
+/* Global reset for the navbar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Container */
+.navbar {
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Navbar list */
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+/* Individual navbar items */
+.nav-item {
+    margin-right: 20px;
+    position: relative;
+}
+
+/* Navbar links */
+.nav-link {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff8c00;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* Language Selector Dropdown */
+.language-selector select {
+    background-color: #333;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.language-selector select:hover {
+    background-color: black;
+    transform: scale(1.05);
+}
+
+/* Search bar styles */
+.search-bar input {
+    padding: 8px 20px;
+    font-size: 16px;
+    border-radius: 2px;
+    border: 2px solid #333;
+    background-color: transparent;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.logo {
+    position: relative;
+    margin-right: 20px;
+}
+
+.logo img {
+    width: 90px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: -32vw;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.search-bar input:focus {
+    border-color: #ff8c00;
+    transform: scale(1.05);
+    outline: none;
+}
+
+/* Profile Icon */
+.profile-icon {
+    position: relative;
+}
+
+.profile-icon-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-icon-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.6);
+    /* Add glow effect */
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #333;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    display: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    min-width: 180px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.profile-icon:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #ff8c00;
+}
+
+/* Cart Icon */
+.cart-icon {
+    position: relative;
+}
+
+.cart-icon-img {
+    width: 32px;
+    height: 25px;
+    transition: transform 0.3s ease;
+}
+
+.cart-icon-img:hover {
+    transform: scale(1.1);
+}
+
+/* Cart count badge */
+.cart-count {
+    position: absolute;
+    top: -9px;
+    right: -15px;
+    background-color: #ff8c00;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 8px;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+}
+
+.cart-icon:hover .cart-count {
+    transform: scale(1.2);
+}
+
+/* Sign In/Sign Up Styles */
+.accounts {
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #ff8c00;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+
+    /* Stack the navbar items vertically on smaller screens */
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Remove extra margin on nav items */
+    .nav-item {
+        margin-right: 0;
+        margin-bottom: 20px;
+        /* Space out items vertically */
+    }
+
+    /* Adjust spacing for language and profile icons */
+    .nav-item.language-selector {
+        margin-top: 10px;
+    }
+
+    .profile-icon,
+    .cart-icon {
+        margin-top: 10px;
+    }
+
+    /* Adjust font size for smaller screens */
+    .nav-link {
+        font-size: 14px;
+    }
+
+    /* Adjust search bar input */
+    .search-bar input {
+        font-size: 14px;
+    }
+}

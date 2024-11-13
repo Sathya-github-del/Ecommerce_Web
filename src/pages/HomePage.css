@@ -1,0 +1,100 @@
+/* Home Page Styles */
+.home-page {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+
+
+.navbar .logo h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.hero {
+    background-image: url('https://img.freepik.com/free-vector/flat-design-electronics-store-facebook-post_23-2151098084.jpg?t=st=1731412346~exp=1731415946~hmac=93e61c1c0833163e3dbf754c1c55b86b023502f5316f46379db3d8596ca92618&w=740');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin: 20px 0;
+}
+
+.featured {
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+
+.featured h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.featured hr {
+    margin: 20px 0;
+}
+
+.hero-swiper {
+    padding: 20px 0;
+}
+
+.hero-swiper img {
+    max-width: 100%;
+    height: auto;
+}
+
+.products {
+    margin-top: 20px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.product img:hover {
+    transform: scale(1.05);
+}
+
+.product {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+    .products table {
+        width: 100%;
+    }
+
+    .products table td {
+        width: 50%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .product img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .products table td {
+        width: 100%;
+    }
+
+    .product img {
+        max-width: 100%;
+    }
+}
